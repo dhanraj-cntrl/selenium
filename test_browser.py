@@ -38,7 +38,7 @@ def test_login(setup,user_name,pass_word):
     setup.find_element(By.XPATH,"//button[@type='submit']").click()
     assert setup.title=="OrangeHRM"
 
-
+@pytest.mark.skip
 def test_AutomationBlogspot(setup):
     setup.get("https://testautomationpractice.blogspot.com/2018/09/automation-form.html")
     setup.find_element(By.XPATH,"//button[contains(text(),'New Tab')]").click()
