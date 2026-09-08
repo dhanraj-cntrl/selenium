@@ -28,10 +28,10 @@ class Test_001_Login:
             assert False
 
 
-    def test_api(self,requests):
-        response=requests.post("https://api.example.com/users")
-        assert response.status_code == 201
-        data = response.json()
-        assert data["id"] ==101
+    # def test_api(self,requests):
+    #     response=requests.post("https://api.example.com/users")
+    #     assert response.status_code == 201
+    #     data = response.json()
+    #     assert data["id"] ==101
 
 

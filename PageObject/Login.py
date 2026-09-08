@@ -6,10 +6,10 @@ class Login:
     user_name="//*[@placeholder='Username']"
     pass_word= "//*[@placeholder='Password']"
     login_button="//button[@type='submit']"
-
-    __user_name="//*[@placeholder='Username']"
-    __pass_word= "//*[@placeholder='Password']"   #private Variable
-    __login_button="//button[@type='submit']"
+    #
+    # __user_name="//*[@placeholder='Username']"
+    # __pass_word= "//*[@placeholder='Password']"   #private Variable
+    # __login_button="//button[@type='submit']"
 
 
     def __init__(self,driver):
@@ -31,13 +31,13 @@ class Login:
 #constructor is being used which user driver which is passed from test cases.
 #where in fixture we can see polymorphism - that is same method different behaviour through diff browser.
 
-
-try:
-    print(10/0)
-except ZeroDivisionError:
-    print("Exception cant divide by zero")
-else:
-    print("in a else block")
-finally:
-    print("finally")
+#
+# try:
+#     print(10/0)
+# except ZeroDivisionError:
+#     print("Exception cant divide by zero")
+# else:
+#     print("in a else block")
+# finally:
+#     print("finally")
 
