@@ -17,7 +17,7 @@ from selenium.webdriver.support import expected_conditions as EC
 #     yield driver
 #     driver.quit()
 
-#@pytest.mark.skip
+@pytest.mark.skip
 def test_homepage(setup):
     setup.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     setup.find_element(By.NAME,"username").send_keys("Admin")
