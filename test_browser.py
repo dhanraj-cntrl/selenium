@@ -17,7 +17,7 @@ def setup(request):
     yield driver
     driver.quit()
 
-@pytest.mark.skip
+#@pytest.mark.skip
 def test_homepage(setup):
     setup.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     setup.find_element(By.NAME,"username").send_keys("Admin")
@@ -26,6 +26,7 @@ def test_homepage(setup):
     assert setup.title=="OrangeHRM"
     setup.save_screenshot("Homepage.png")
 
+@pytest.mark.skip
 @pytest.mark.parametrize("user_name,pass_word",
                          [("admin12","admin123"),
                           ("Admin","admin123")

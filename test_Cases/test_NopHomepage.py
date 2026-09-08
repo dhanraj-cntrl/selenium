@@ -14,7 +14,7 @@ class Test_001_HomepageNOP:
     test_url = "https://practicetestautomation.com/practice-test-login/"
     blog_spotURl= "https://testautomationpractice.blogspot.com/2018/09/automation-form.html"
 
-    @pytest.mark.skip
+    #@pytest.mark.skip
     def test_LoginNOP(self,setup):
         self.driver=setup
         setup.get(self.test_url)
