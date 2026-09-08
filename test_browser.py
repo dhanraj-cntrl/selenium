@@ -4,18 +4,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
-@pytest.fixture(params=["Chrome","Edge"])
-def setup(request):
-    browser=request.param
-    if browser=="Chrome":
-        driver=webdriver.Chrome()
-    elif browser=="Edge":
-        driver=webdriver.Edge()
-    driver.maximize_window()
-    driver.implicitly_wait(10)
-    yield driver
-    driver.quit()
+#
+# @pytest.fixture(params=["Chrome","Edge"])
+# def setup(request):
+#     browser=request.param
+#     if browser=="Chrome":
+#         driver=webdriver.Chrome()
+#     elif browser=="Edge":
+#         driver=webdriver.Edge()
+#     driver.maximize_window()
+#     driver.implicitly_wait(10)
+#     yield driver
+#     driver.quit()
 
 #@pytest.mark.skip
 def test_homepage(setup):
