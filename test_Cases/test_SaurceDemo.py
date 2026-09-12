@@ -36,7 +36,7 @@ class Test_101_Saurcedemo:
         self.ssob1.set_saiceitemaddtokart()
         self.ssob1.check_kart()
         self.driver.save_screenshot("AddtoKart.png")
-        
+
 
 
 
