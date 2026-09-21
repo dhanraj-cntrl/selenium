@@ -1,4 +1,3 @@
-import openpyxl
 
 def getRowcount(path,sheetname):
     workbook=openpyxl.load_workbook(path)
