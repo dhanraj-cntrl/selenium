@@ -25,19 +25,3 @@ class Login:
         self.driver.find_element(By.XPATH,self.login_button).click()
 
 
-#private variable -- __a can be accessible within class itself
-#i have oop concept in my login class Where i kept all locator is inside class and related operation as well. That we
-#called it as encapsulation. Where as self.obe.set_user_name where all business logic is kept inside class called as abstraction.
-#constructor is being used which user driver which is passed from test cases.
-#where in fixture we can see polymorphism - that is same method different behaviour through diff browser.
-
-#
-# try:
-#     print(10/0)
-# except ZeroDivisionError:
-#     print("Exception cant divide by zero")
-# else:
-#     print("in a else block")
-# finally:
-#     print("finally")
-
