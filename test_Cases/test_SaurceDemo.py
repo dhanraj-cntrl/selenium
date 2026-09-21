@@ -15,10 +15,10 @@ class Test_101_Saurcedemo:
         self.driver.get(self.ss_url)
         self.ssob1=SauceDemo(self.driver)
         self.wait=WebDriverWait(self.driver,20)
-        self.wait.until(EC.presence_of_element_located((By.XPATH,self.ssob1.sauce_uname)))
-        self.ssob1.sauce_set_username(self.ss_username)
-        self.ssob1.sauce_set_password(self.ss_password)
-        self.ssob1.sauce_login()
+        self.wait.until(EC.presence_of_element_located((By.XPATH,self.ssob1.user_name)))
+        self.ssob1.send_username(self.ss_username)
+        self.ssob1.send_password(self.ss_password)
+        self.ssob1.click_login()
         assert self.driver.title == "Swag Labs"
 
     def test_sauce_demo_addtokart(self,setup):
@@ -26,16 +26,10 @@ class Test_101_Saurcedemo:
         self.driver.get(self.ss_url)
         self.ssob1=SauceDemo(self.driver)
         self.wait = WebDriverWait(self.driver, 20)
-        self.wait.until(EC.presence_of_element_located((By.XPATH, self.ssob1.sauce_uname)))
-        self.ssob1.sauce_set_username(self.ss_username)
-        self.ssob1.sauce_set_password(self.ss_password)
-        self.ssob1.sauce_login()
-        wait=WebDriverWait(self.driver,20)
-        wait.until(EC.presence_of_element_located((By.XPATH,self.ssob1.saurce_item)))
-        self.ssob1.set_sauceitem()
-        self.ssob1.set_saiceitemaddtokart()
-        self.ssob1.check_kart()
-        self.driver.save_screenshot("AddtoKart.png")
+        self.wait.until(EC.presence_of_element_located((By.XPATH, self.ssob1.send_username())))
+        self.ssob1.send_username(self.ss_username)
+        self.ssob1.send_password(self.ss_password)
+        self.ssob1.click_login()
 
 
 
